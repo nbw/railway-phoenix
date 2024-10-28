@@ -3,13 +3,23 @@
 MIX_ENV = 'production'
 
 [phases.setup]
-nixPkgs = ['elixir']
+nixPkgs = ['erlang', 'elixir']
 
 [phases.install]
-cmds = ['mix local.hex --force','mix local.rebar --force','mix deps.get --only prod']
+cmds = [
+  'mix local.hex --force',
+  'mix local.rebar --force',
+  'mix deps.get --only prod'
+]
 
 [phases.build]
-cmds = ['mix compile', 'mix assets.deploy']
+cmds = [
+  'mix compile',
+  'mix assets.deploy'
+]
 
 [start]
-cmds = ['mix ecto.setup', 'mix phx.server'] 
+cmds = [
+  'mix ecto.migrate', # Run migrations instead of ecto.setup
+  'mix phx.server'
+]
