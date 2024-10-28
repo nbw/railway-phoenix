@@ -19,5 +19,5 @@ cmds = [
 ]
 
 [start]
-cmd = "mix ecto.migrate && mix phx.server"
+cmd = "mix ecto.setup && mix phx.server"
 
