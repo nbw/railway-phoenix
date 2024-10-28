@@ -19,7 +19,5 @@ cmds = [
 ]
 
 [start]
-cmds = [
-  'mix ecto.migrate', # Run migrations instead of ecto.setup
-  'mix phx.server'
-]
+cmd = "mix ecto.migrate && mix phx.server"
+
