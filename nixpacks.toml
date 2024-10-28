@@ -1,6 +1,6 @@
 # nixpacks.toml
 [variables]
-MIX_ENV = 'production'
+MIX_ENV = 'prod'
 
 [phases.setup]
 nixPkgs = ['erlang', 'elixir']
