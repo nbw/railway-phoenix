@@ -3,7 +3,7 @@
 MIX_ENV = 'prod'
 
 [phases.setup]
-nixPkgs = ['erlang', 'elixir']
+nixPkgs = ['...', 'erlang']
 
 [phases.install]
 cmds = [
