@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :helloworld, Helloworld.Repo,
-  username: "unicodeveloper",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "helloworld_dev",
   stacktrace: true,
